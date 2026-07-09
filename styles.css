@@ -1,0 +1,29 @@
+#content {
+max-width: 1600px;
+margin: 0 auto;
+}
+body {
+    background-color: #003049;
+    
+}
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fcbf49;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #fcbf49;
+}
+footer {
+    color: #fcbf49;
+    background-color: #f77f00;
+}
+.msg {
+    background-color: #d62828;
+}
+.logo {
+    background-color: white;
+    border-radius: 60%;
+    height: 200px;
+    width: 250px;
+}
