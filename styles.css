@@ -1,6 +1,13 @@
 
 .hero{
+    display: flex;
+    justify-content: right;
+    height: 300px;
+    width: 1200px;
 
+}
+.hero .msg {
+    justify-self: left;
 }
 body {
     background-color: #003049;
@@ -21,7 +28,7 @@ header {
 }
 
 nav {
-        font-size: 25px;
+    font-size: 25px;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
