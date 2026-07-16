@@ -17,15 +17,17 @@
 
     --heading-font: 'Montserrat', serif;
     --text-font: 'Roboto', sans-serif;
+
+    --outline: var(--blue);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
-h1, h3 {
+h1, h3, p {
     color: var(--yellow);
 }
-h2 {
+h2, li, #perfect-for p {
     color: var(--blue);
 }
 
@@ -33,15 +35,50 @@ p, li, a {
     font-family: var(--text-font);
 }
 
-main {
+/* ---------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--orange);
+    outline: 1px solid var(--outline);
+    margin-bottom: 1px;
+}
+
+header img {
+    max-height: 100px;
+}
+
+nav {
+    margin: auto 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--grey);
+    padding: 30px;
+}
+nav a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+/* ---------------------------------------------- */
+
+
+
+body {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto;
+    background-color: var(--blue);
+}
+
+#residence-hero, #residence-details {
+    background-color: var(--grey);
 }
 
 #residence-hero {
     display: grid;
     grid-template-columns: 30% 70%;
-    outline: 1px solid #000;
+    outline: 1px solid var(--outline);
     padding: 20px;
 }
 #features {
@@ -51,7 +88,7 @@ main {
     list-style-type: none;
     padding: 20px 60px 20px 20px;
     width: fit-content;
-    outline: 1px solid #000;
+    outline: 1px solid var(--outline);
     margin-bottom: 30px;
 }
 #features li {
@@ -72,7 +109,7 @@ main {
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     padding: 20px;
-    outline: 1px solid #000;
+    outline: 1px solid var(--outline);
     margin-top: 1px;
 }
 #residence-details ul {
@@ -98,7 +135,7 @@ main {
 
 #perfect-for {
     text-align: center;
-    outline: 1px solid #000;
+    outline: 1px solid var(--outline);
     width: 70%;
     justify-self: center;
     height: fit-content;
@@ -109,9 +146,61 @@ main {
     width: 70%;
 }
 
-body {
-    background-color: #ccc;
+footer {
+    margin: 0;
+    background-color: var(--orange);
+    outline: 1px solid var(--outline);
 }
-#residence-hero, #residence-details {
-    background-color: #eee;
+footer p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ---------------------------------------------- */
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #residence-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #floor-plans img {
+        width: 100%;
+    }
+    #perfect-for {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #residence-hero, #residence-details {
+        display:block;
+    }
+    main * {
+        justify-content: center;
+        justify-self: center;
+        text-align: center;
+    }
+    #residence-details img {
+        width: 70%;
+    }
+    #perfect-for {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+    nav a {
+        display: block;
+        padding: 10px;
+    }
 }
