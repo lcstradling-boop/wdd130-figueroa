@@ -1,61 +1,123 @@
-
-#hero{
-    display: grid;
-    justify-content: right;
-    height: 300px;
-    width: 1200px;
-    grid-template-columns: 1fr 1fr;
-    
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
-body {
-    background-color: #003049;
-    display: grid;
-    margin: 0;
-    justify-content: center;
-    max-width: 1500px;
-
+* {
+    box-sizing: border-box;
 }
 
+:root {
+    --blue: #003049;
+    --red: #d62828;
+    --orange: #f77f00;
+    --yellow: #fcbf49;
+
+    --grey: #eee;
+
+    --heading-font: 'Montserrat', serif;
+    --text-font: 'Roboto', sans-serif;
+
+    --outline: var(--blue);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+h1, h3, p {
+    color: var(--yellow);
+}
+h2, li, #perfect-for p {
+    color: var(--blue);
+}
+
+p, li, a {
+    font-family: var(--text-font);
+}
+
+/* ---------------------------------------------- */
 header {
     display: flex;
     justify-content: space-between;
-    height: 200px;
-    width: 1200px;
-    background-color: #f77f00;
-    
+    background-color: var(--orange);
+    outline: 1px solid var(--outline);
+    margin-bottom: 1px;
+}
+
+header img {
+    max-height: 100px;
 }
 
 nav {
-    font-size: 25px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: var(--grey);
+    padding: 30px;
+}
+nav a:hover {
+    color: var(--red);
+    text-decoration: underline;
 }
 
-h5 {
-    font-family: 'Montserrat', sans-serif;
-    color: #fcbf49;
+body {
+    max-width: 1200px;
+    margin: 10px auto;
+    background-color: var(--blue);
 }
-p {
-    font-family: 'Roboto', sans-serif;
-    color: #fcbf49;
-}
+
 footer {
-    color: #fcbf49;
-    background-color: #f77f00;
+    margin: 0;
+    background-color: var(--orange);
+    outline: 1px solid var(--outline);
 }
-.msg {
-    background-color: #d62828;
+footer p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
 }
-.logo {
-    background-color: #f77f00;
-    border-radius: 60%;
-    height: 200px;
-    width: 250px;
+
+/* ---------------------------------------------- */
+
+main {
+    background-color: var(--grey);
+}
+
+.box {
+    outline: 1px var(--blue) solid; 
+    width: 80%;
+    margin: 15px;
+    padding: 20px;
+}
+.box img {
+    width: 100%;
+}
+section {
+    outline: 1px var(--blue) solid; 
+    padding: 20px;
+}
+#hero{
+    display: grid;
+    justify-content: right;
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+#hero img {
+    width: 100%;
+}
+#two-homes {
+    display: flex;
+}
+#minis {
+    display: block;
+    text-align: center;
+}
+#minis-holder {
+    display: flex;
+}
+#mini {
+    display: block;
 }

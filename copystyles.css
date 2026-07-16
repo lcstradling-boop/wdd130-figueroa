@@ -1,0 +1,91 @@
+
+:root {
+    --blue: #003049;
+    --red: #d62828;
+    --orange: #f77f00;
+    --yellow: #fcbf49;
+
+    --grey: #eee;
+
+    --heading-font: 'Montserrat', serif;
+    --text-font: 'Roboto', sans-serif;
+
+    --outline: var(--blue);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--orange);
+    outline: 1px solid var(--outline);
+    margin-bottom: 1px;
+}
+header img {
+    max-height: 100px;
+}
+
+nav {
+    margin: auto 10px;
+}
+#hero{
+    display: grid;
+    justify-content: right;
+    height: 300px;
+    width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+h1 {
+    color: white;
+}
+body {
+    background-color: #003049;
+    display: grid;
+    margin: 0;
+    justify-content: center;
+    max-width: 1500px;
+
+}
+
+
+
+nav {
+    margin: auto 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--grey);
+    padding: 30px;
+}
+nav a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fcbf49;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #fcbf49;
+}
+footer {
+    margin: 0;
+    background-color: var(--orange);
+    outline: 1px solid var(--outline);
+}
+footer p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+.msg {
+    background-color: #d62828;
+}
+.logo {
+    background-color: #f77f00;
+    border-radius: 60%;
+    height: 200px;
+    width: 250px;
+}
