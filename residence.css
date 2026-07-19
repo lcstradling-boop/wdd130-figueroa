@@ -150,11 +150,34 @@ footer {
     margin: 0;
     background-color: var(--orange);
     outline: 1px solid var(--outline);
+    text-align: center;
 }
 footer p {
     margin: 0;
     padding: 10px;
-    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+}
+
+footer div {
+    margin: 0 20px;
+}
+
+footer form {
+    max-width: 400px;
+}
+footer form input {
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 45%;
+}
+footer form textarea {
+    width: 91%
+}
+footer form button {
+    width: 91%;
 }
 
 /* ---------------------------------------------- */
@@ -192,6 +215,9 @@ footer p {
     #perfect-for {
         width: 200px;
     }
+    footer form textarea, footer form input, footer form button {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -202,5 +228,8 @@ footer p {
     nav a {
         display: block;
         padding: 10px;
+    }
+    .footer-top {
+        display: block;
     }
 }
